@@ -1,0 +1,54 @@
+
+  <div class="jumbotron" id="nav-gap">
+      <div class="container">
+          <div class="text-center">
+              <h1>Find your favourite product</h1>
+              <p>Search many of Ecommerce's product</p>
+          </div>
+
+          <div class="row">
+            <div class="input-group col-md-6 col-md-offset-3">
+              <input type="text" id="instance-search" class="form-control input-lg" 
+              placeholder="Search" name="search_term" />
+              <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="submit">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </span>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="container">
+      <div class="row" id="search-results">
+          <% for(let i=0; i < products.length; i++){ %>
+             <div class="col-md-4">
+                 <div class="thumbnail">
+                     <img src="<%= products[i].image %>" alt="thumbnail">
+                     <div class="caption">
+                         <a href="/product/<%= products[i]._id %>">
+                            <h3><%= products[i].name %></h3>
+                         </a>
+                         <p>Price: <%= products[i].price %> $</p>
+                         <p>Category: <%= products[i].category.name %></p>
+                     </div>
+                 </div>
+             </div>
+          <% } %>
+      </div>
+  </div>
+
+  <div class="container text-center">
+    <nav aria-label="...">
+      <ul class="pagination text-center">      
+          <% for(let i = 1; i <= pages; i++) { %>
+            <% if (i === Number(page)) { %>
+              <li class="active" ><a href="/page/<%= i %>"><%= i %></a></li>
+            <% } else { %>
+              <li ><a href="/page/<%= i %>"><%= i %></a></li>
+            <% } %>
+          <% } %>      
+      </ul>
+    </nav>
+  </div>

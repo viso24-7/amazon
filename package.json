@@ -1,0 +1,35 @@
+{
+  "name": "amazonclone",
+  "version": "1.0.0",
+  "description": "amazon clone website",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start-server": "node server.js"
+  },
+  "author": "Viso",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.0",
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.5.0",
+    "faker": "^4.1.0",
+    "mongoose": "^5.9.16",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
